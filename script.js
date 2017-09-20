@@ -1,9 +1,11 @@
 class User extends React.Component {
   render() {
     return (
-      <div>
-        <img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
-        <a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
+      <div className="flex-item">
+        <a href={this.props.user.html_url}><img className="card-img" src={this.props.user.avatar_url} style={{maxWidth: '200px'}}/></a>
+        <div className="card-body">
+          <p className="paragraph" target="_blank">{this.props.user.login}</p>
+        </div>
       </div>
     );
   }
@@ -16,7 +18,7 @@ class UsersList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="flex-container">
         {this.users}
       </div>
     );
@@ -47,9 +49,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <form onSubmit={event => this.onSubmit(event)}>
-          <label htmlFor="searchText">Search by user name</label>
+          <label htmlFor="searchText">Search by user name:</label>
           <input
             type="text"
             id="searchText"

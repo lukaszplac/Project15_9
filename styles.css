@@ -1,59 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 * {
 	box-sizing: border-box;
 }
 
-body {
-	margin: 0;
-	padding: 0;
-}
-
-#app {
-	background-color: lightblue;
-	margin: 0 auto;
-	padding: 15px 0;
-	width: 50%;
-	min-height: 200px;
-
-}
-
-#app>.container {
-	background-color: lightgreen;
-	margin: 0 auto;
-	width: 50%;
-	min-height: 200px;
+.container {
+	border-top: 4px solid black;
+	border-bottom: 4px solid black;
+	max-width: 80%;
+	margin: 20px auto;
 	text-align: center;
-	border-radius: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
 }
 
-#app>.container>.controls {
-	display: inline-block;
+.container>form {
+	margin: 10px auto;
+}
+
+.container>form>input {
 	margin: 10px;
 }
 
-#app>.container>.controls>.button {
-	margin: 10px;
-	padding: 5px;
-	background-color: white;
-	border: 1px solid black;
-	border-radius: 4px;
-	text-decoration: none;
+.flex-container {
+	padding: 30px 0;
+	max-width: 1300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
-#app>.container>.controls>.button:hover {
-	background-color: black;
-	color: white;
+.flex-item {
+	flex: 0 1 auto;
+	align-self: auto;
+	background-color: lightblue;
 }
 
-#app>.container>.stopwatch {
-	font-size: 20px;
-	color: blue;
+.flex-item:hover>a>.card-img {
+	opacity: 0.5;
 }
 
-#app>.container>.results {
-	width: 50%;
-	margin: 0 auto;
-	padding: 0;
-	list-style: none;
-	background-color: white;
-	border-radius: 4px;
+.flex-item:hover>.card-body>p {
+	animation: anim 1s;
+	position: relative;
+}
+
+@keyframes anim {
+	0% {left: 0;}
+	25% {left: 40px;}
+	50% {left: -40px;}
+	65% {left: 20px;}
+	80% {left: -20px;}
+	100% {left: 0px;}
 }
