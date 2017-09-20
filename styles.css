@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#app {
+	background-color: lightblue;
+	margin: 0 auto;
+	padding: 15px 0;
+	width: 50%;
+	min-height: 200px;
+
+}
+
+#app>.container {
+	background-color: lightgreen;
+	margin: 0 auto;
+	width: 50%;
+	min-height: 200px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#app>.container>.controls {
+	display: inline-block;
+	margin: 10px;
+}
+
+#app>.container>.controls>.button {
+	margin: 10px;
+	padding: 5px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
+#app>.container>.controls>.button:hover {
+	background-color: black;
+	color: white;
+}
+
+#app>.container>.stopwatch {
+	font-size: 20px;
+	color: blue;
+}
+
+#app>.container>.results {
+	width: 50%;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	background-color: white;
+	border-radius: 4px;
+}
